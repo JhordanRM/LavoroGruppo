@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>Prenotazioni</title>
+    <link rel="stylesheet" href="global.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdn.tailwindcss.com"></script>
+  </head>
+
+  <body>
+    <div class="bg-gradient-to-tr from-fuchsia-300 to-sky-500">
+      <section
+        class="p-4 flex flex-col justify-center min-h-screen max-w-3xl mx-auto"
+      >
+        <div class="p-6 bg-sky-100 rounded">
+          <div class="flex items-center justify-center font-black m-3 mb-12">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              class="h-10 w-10 mr-3 text-red-600 animate-pulse"
+              viewBox="0 0 20 20"
+              fill="currentColor"
+            >
+              <path
+                fill-rule="evenodd"
+                d="M3.172 5.172a4 4 0 015.656 0L10 6.343l1.172-1.171a4 4 0 115.656 5.656L10 17.657l-6.828-6.829a4 4 0 010-5.656z"
+                clip-rule="evenodd"
+              />
+            </svg>
+            <h1 class="tracking-wide text-1xl text-gray-900">
+              Prenota la tua donazione
+            </h1>
+          </div>
+          <form
+            id="formDati"
+            action="result.html"
+            method="get"
+            onsubmit="return validateForm()"
+            class="font-medium placeholder-gray-400"
+          >
+            <label class="text-sm" for="name">Nome:</label>
+            <input
+              type="text"
+              id="name"
+              name="name"
+              placeholder="Il tuo nome"
+              class="mb-3 px-2 py-1.5 mb-3 mt-1 w-full border border-gray-300 rounded-md text-sm shadow-sm"
+            />
+
+            <label class="text-sm" for="lastname">Cognome:</label>
+            <input
+              type="text"
+              id="lastname"
+              name="lastname"
+              placeholder="Il tuo cognome"
+              class="mb-3 px-2 py-1.5 mb-3 mt-1 w-full border border-gray-300 rounded-md text-sm shadow-sm"
+            />
+
+            <label for="gender" class="text-sm">Sesso:</label>
+            <div id="genderC" class="py-1.5">
+              <label for="male">Maschio:</label>
+              <input type="radio" id="male" value="male" name="gender" />
+              <label for="female">Femmina:</label>
+              <input type="radio" id="female" value="female" name="gender" />
+            </div>
+
+            <div class="py-1.5">
+              <label class="text-sm" for="blood">Gruppo Saguigno:</label>
+              <select name="blood" id="blood">
+                <option value="0">0</option>
+                <option value="A">A</option>
+                <option value="B">B</option>
+                <option value="AB">AB</option>
+              </select>
+            </div>
+            <div class="py-1.5">
+              <label class="text-sm" for="bornDate">Data di Nascita:</label>
+              <input
+                type="date"
+                id="bornDate"
+                name="bornDate"
+                max="2023-01-01"
+              />
+            </div>
+            <div class="py-1.5">
+              <label class="text-sm" for="day">Giorno</label>
+              <select id="day" name="day">
+                <option value="1">Luned&igrave;</option>
+                <option value="2">Marted&igrave;</option>
+                <option value="3">Mercoled&igrave;</option>
+                <option value="4">Gioved&igrave;</option>
+                <option value="5">Venerd&igrave;</option>
+                <option value="6">Sabato</option>
+                <option value="7">Domenica</option>
+              </select>
+            </div>
+
+            <div class="py-1.5">
+              <label class="text-sm" for="location">Residenza:</label>
+              <input
+                type="text"
+                id="location"
+                name="location"
+                placeholder="La tua residenza"
+                class="mb-3 px-2 py-1.5 mb-3 mt-1 w-full border border-gray-300 rounded-md text-sm shadow-sm placeholder-gray-400"
+              />
+            </div>
+            <br />
+            <input
+              type="submit"
+              value="Submit"
+              class="px-4 py-1.5 rounded-md shadow-lg bg-gradient-to-r from-pink-600 to-red-600 text-gray-100 transition duration-300"
+            />
+          </form>
+        </div>
+      </section>
+    </div>
+    <script type="text/javascript" src="./index.js"></script>
+  </body>
+</html>
